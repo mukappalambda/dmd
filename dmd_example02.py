@@ -5,6 +5,7 @@ from dmd import DMD
 
 plt.style.use("ggplot")
 
+
 def read_temperature(only_returns_temp: bool = True) -> pd.DataFrame:
     url = "https://raw.githubusercontent.com/jbrownlee/Datasets/master/daily-min-temperatures.csv"
     df_raw = pd.read_csv(url)
@@ -14,6 +15,7 @@ def read_temperature(only_returns_temp: bool = True) -> pd.DataFrame:
 
     return df_raw
 
+
 def fit_dmd(ts_length: int) -> DMD:
     dmd = DMD()
     dmd.fit(df, ts_length=ts_length)
@@ -21,9 +23,10 @@ def fit_dmd(ts_length: int) -> DMD:
 
 
 def make_pred_from_dmd(dmd: DMD, ts_length: int, df: pd.DataFrame, t: int):
-    pred_x = np.arange(t, t+ts_length)
+    pred_x = np.arange(t, t + ts_length)
     pred_y = dmd.predict_future(t)
     return pred_x, pred_y
+
 
 def main_plot(df: pd.DataFrame, fname: str):
     ts_length = 1500
@@ -41,6 +44,7 @@ def main_plot(df: pd.DataFrame, fname: str):
     plt.legend()
 
     plt.savefig(fname)
+
 
 if __name__ == "__main__":
     df = read_temperature()

@@ -7,7 +7,7 @@ plt.style.use("ggplot")
 
 if __name__ == "__main__":
     x = np.arange(1000)
-    y = np.sin(0.02*x) + 5e-2 * np.random.randn(np.prod(x.shape))
+    y = np.sin(0.02 * x) + 5e-2 * np.random.randn(np.prod(x.shape))
 
     figsize = (24, 10)
     ts_length = 200
@@ -21,12 +21,12 @@ if __name__ == "__main__":
     plt.plot(y, "r", label="raw data")
 
     t = 0
-    pred_x = np.arange(t, t+ts_length)
+    pred_x = np.arange(t, t + ts_length)
     pred_y = dmd.predict_future(t)
     plt.plot(pred_x, pred_y, "b", label="fitted data")
 
     t = y.shape[0]
-    pred_x = np.arange(t, t+ts_length)
+    pred_x = np.arange(t, t + ts_length)
     pred_y = dmd.predict_future(t)
     plt.plot(pred_x, pred_y, "c", label="future prediction")
     plt.legend()

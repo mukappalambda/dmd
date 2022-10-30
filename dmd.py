@@ -13,8 +13,9 @@ class DMD:
 
     def get_dmd_pair(self, df: pd.DataFrame, ts_length: int):
         y = df.to_numpy().flatten()
-        data = [y[start:start+ts_length]
-                for start in range(0, y.shape[0]-ts_length)]
+        data = [
+            y[start : start + ts_length] for start in range(0, y.shape[0] - ts_length)
+        ]
         tensor = np.array(data).T
         self.x1 = tensor[:, :-1]
         self.x2 = tensor[:, 1:]
@@ -52,6 +53,8 @@ class DMD:
     def predict_future(self, t: int):
         pseudophix0 = np.linalg.pinv(self.phi) @ self.x0.reshape(-1, 1)
         atphi = self.phi @ np.diag(self.lamb ** t)
-        xt = (atphi @ pseudophix0).reshape(-1,)
+        xt = (atphi @ pseudophix0).reshape(
+            -1,
+        )
 
         return np.real(xt)
