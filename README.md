@@ -10,13 +10,28 @@ The major reference is this arXiv article: [On Dynamic Mode Decomposition: Theor
 
 ---
 
-To experiment with the examples, run
+Install from source:
 
 ```bash
-pip install -r requirements.txt
+git clone https://github.com/mukappalambda/dmd.git
+poetry build
+cd dist
+pip install dmd-*.whl
+#pip show dmd
+```
 
+Run the examples:
+
+```bash
+cd examples
 python dmd_example01.py
 python dmd_example02.py
+```
+
+Uninstall:
+
+```bash
+pip uninstall dmd -y
 ```
 
 ## History
