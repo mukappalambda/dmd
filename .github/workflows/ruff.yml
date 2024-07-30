@@ -9,8 +9,6 @@ jobs:
         with:
           src: "./dmd"
           version: 0.5.5
-    steps:
-      - uses: actions/checkout@v4
       - uses: chartboost/ruff-action@v1
         with:
           src: "./dmd"
