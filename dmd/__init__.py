@@ -1,1 +1,1 @@
-from .base import DMD
+from .base import DMD  # noqa: F401
