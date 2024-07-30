@@ -52,7 +52,7 @@ class DMD:
 
     def predict_future(self, t: int):
         pseudophix0 = np.linalg.pinv(self.phi) @ self.x0.reshape(-1, 1)
-        atphi = self.phi @ np.diag(self.lamb ** t)
+        atphi = self.phi @ np.diag(self.lamb**t)
         xt = (atphi @ pseudophix0).reshape(
             -1,
         )
