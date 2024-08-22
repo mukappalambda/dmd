@@ -8,10 +8,22 @@ jobs:
       - uses: chartboost/ruff-action@v1
         with:
           src: "./dmd"
-          version: 0.5.5
+          version: 0.6.1
+          args: "check --select I"
       - uses: chartboost/ruff-action@v1
         with:
           src: "./dmd"
-          version: 0.5.5
+          version: 0.6.1
+          args: "format --check"
+          changed-files: "true"
+      - uses: chartboost/ruff-action@v1
+        with:
+          src: "./examples"
+          version: 0.6.1
+          args: "check --select I"
+      - uses: chartboost/ruff-action@v1
+        with:
+          src: "./examples"
+          version: 0.6.1
           args: "format --check"
           changed-files: "true"
