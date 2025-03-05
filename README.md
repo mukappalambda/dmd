@@ -10,17 +10,25 @@ The major reference is this arXiv article: [On Dynamic Mode Decomposition: Theor
 
 ---
 
-Install from source:
+## Install `dmd`
+
+**Install from GitHub**
+
+```bash
+pip install git+https://github.com/mukappalambda/dmd.git
+```
+
+**Install from Source**
 
 ```bash
 git clone https://github.com/mukappalambda/dmd.git
 poetry build
-cd dist
-pip install dmd-*.whl
-#pip show dmd
+find dist -name "*-$(poetry version -s)-*.whl" | xargs -I{} pip install {}
 ```
 
-Run the examples:
+---
+
+## Run Examples
 
 ```bash
 cd examples
@@ -28,7 +36,9 @@ python dmd_example01.py
 python dmd_example02.py
 ```
 
-Uninstall:
+---
+
+## Uninstall `dmd`
 
 ```bash
 pip uninstall dmd -y
