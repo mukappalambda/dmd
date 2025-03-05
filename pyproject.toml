@@ -5,6 +5,7 @@ description = ""
 authors = [
     {name = "mukappalambda",email = "maokailan24@gmail.com"}
 ]
+license = {text = "MIT"}
 readme = "README.md"
 requires-python = ">=3.11"
 dependencies = [
