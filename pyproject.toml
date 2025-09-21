@@ -17,7 +17,7 @@ dependencies = [
 [tool.poetry]
 
 [tool.poetry.group.dev.dependencies]
-ruff = "^0.9.9"
+ruff = ">=0.13.1"
 
 [build-system]
 requires = ["poetry-core>=2.0.0,<3.0.0"]
