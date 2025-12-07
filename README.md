@@ -1,5 +1,8 @@
 # Python Implementation of Dynamic Mode Decomposition
 
+[![Dependabot Updates](https://github.com/mukappalambda/dmd/actions/workflows/dependabot/dependabot-updates/badge.svg)](https://github.com/mukappalambda/dmd/actions/workflows/dependabot/dependabot-updates)
+[![Ruff](https://github.com/mukappalambda/dmd/actions/workflows/ruff.yml/badge.svg)](https://github.com/mukappalambda/dmd/actions/workflows/ruff.yml)
+
 This python code illustrates how to apply Dynamic Mode Decomposition (DMD) to univariate time series forecasting tasks.
 
 Two examples are provided here.
