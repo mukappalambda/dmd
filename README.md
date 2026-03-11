@@ -3,8 +3,15 @@
 [![Dependabot Updates](https://github.com/mukappalambda/dmd/actions/workflows/dependabot/dependabot-updates/badge.svg)](https://github.com/mukappalambda/dmd/actions/workflows/dependabot/dependabot-updates)
 [![Ruff](https://github.com/mukappalambda/dmd/actions/workflows/ruff.yml/badge.svg)](https://github.com/mukappalambda/dmd/actions/workflows/ruff.yml)
 
-
 This Python package provides an implementation of Dynamic Mode Decomposition (DMD) specifically designed for univariate time series forecasting. DMD offers a data-driven approach for analyzing the dynamics of complex systems, making it suitable for forecasting and system identification applications.
+
+## Table of Contents
+
+- [Python Implementation of Dynamic Mode Decomposition](#python-implementation-of-dynamic-mode-decomposition)
+  - [Install dmd](#install-dmd)
+  - [Run Examples](#run-examples)
+  - [Uninstall dmd](#uninstall-dmd)
+  - [History](#history)
 
 Two example scripts are included to demonstrate typical usage scenarios.
 
