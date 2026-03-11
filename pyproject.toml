@@ -14,13 +14,14 @@ dependencies = [
     "matplotlib (>=3.8.0)"
 ]
 
-[tool.poetry]
-
-[tool.poetry.group.dev.dependencies]
+[tool.group.dev.dependencies]
 ruff = ">=0.13.1"
 pylint = "^4.0.5"
 pyright = "^1.1.408"
 
 [build-system]
-requires = ["poetry-core>=2.0.0,<3.0.0"]
-build-backend = "poetry.core.masonry.api"
+requires = ["uv_build>=0.10.9,<0.11.0"]
+build-backend = "uv_build"
+
+[tool.uv.build-backend]
+module-root = ""
