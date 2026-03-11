@@ -14,14 +14,16 @@ dependencies = [
     "matplotlib (>=3.8.0)"
 ]
 
-[tool.group.dev.dependencies]
-ruff = ">=0.13.1"
-pylint = "^4.0.5"
-pyright = "^1.1.408"
-
 [build-system]
 requires = ["uv_build>=0.10.9,<0.11.0"]
 build-backend = "uv_build"
+
+[dependency-groups]
+dev = [
+    "pylint>=4.0.5",
+    "pyright>=1.1.408",
+    "ruff>=0.15.5",
+]
 
 [tool.uv.build-backend]
 module-root = ""
