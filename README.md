@@ -33,8 +33,8 @@ pip install git+https://github.com/mukappalambda/dmd.git
 
 ```bash
 git clone https://github.com/mukappalambda/dmd.git
-poetry build
-find dist -name "*-$(poetry version -s)-*.whl" | xargs -I{} pip install {}
+uv build
+pip install --user dist/dmd-<version>-py3-none-any.whl
 ```
 
 ---
